@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="gallery.css" media="screen">
+<meta charset="utf-8">
+<title>Jacob's Real Estate Photography Website</title>
+</head>
+<body>
+     <div class="navbar">
+        <a class="logo" href="index.html">
+            <h1 class="logop1">JACOB STEPHENS</h1>
+            <span>PHOTOGRAPHY</span>
+        </a>
+        <nav>  
+            <a class="header-list" id="about-me" href="about.html">About Me</a>
+            <div class="dropdown">
+                <a class="header-list" id="gallery">Gallery</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Ground-level</a>
+                        <a href="aerial_gallery.html">Aerial</a>
+                    </div>
+            </div>
+            <a class="header-list" href="contact.html">Contact</a>    
+        </nav>
+    </div>
+    <div class="container">
+
+        <div class="gallery-text">
+            <h>Aerial Gallery</h>
+        </div>
+
+        <div class="full-img" id="fullImgBox">
+            <img src="media/ground/Alta Vista-10.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+
+        <div class="gallery">
+            <img class="media" src="media/aerial/DJI_0100.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0103.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0106.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0109.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0111.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0112-edit.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0115-edit.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0122.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0130.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0131-edit.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0174-edit.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/aerial/DJI_0188-edit.jpg" onclick="openFullImg(this.src)">
+        </div>
+
+        <script>
+
+            var FullImgBox = document.getElementById("fullImgBox");
+            var FullImg = document.getElementById("fullImg");
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex"; //makes the lightbox show up!
+                fullImg.src = pic;
+            }
+            
+            function closeFullImg(){
+                fullImgBox.style.display = "none"; //makes the lightbox dissapear!
+            }
+        </script>
+
+    </div>
+    <div class="footer">
+        <div>Copyright &copy; 2023 Jacob Stephens Photography</div>        
+    </div>
+</body>
+</html>

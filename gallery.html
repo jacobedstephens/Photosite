@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="gallery.css" media="screen">
+<meta charset="utf-8">
+<title>Jacob's Real Estate Photography Website</title>
+</head>
+<body>
+     <div class="navbar">
+        <a class="logo" href="index.html">
+            <h1 class="logop1">JACOB STEPHENS</h1>
+            <span>PHOTOGRAPHY</span>
+        </a>
+        <nav>  
+            <a class="header-list" id="about-me" href="about.html">About Me</a>
+            <div class="dropdown">
+                <a class="header-list" id="gallery">Gallery</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Ground-level</a>
+                        <a href="aerial_gallery.html">Aerial</a>
+                    </div>
+            </div>
+            <a class="header-list" href="contact.html">Contact</a>    
+        </nav>
+    </div>
+    <div class="container">
+
+        <div class="gallery-text">
+            <h>Ground-level Gallery</h>
+        </div>
+
+        <div class="full-img" id="fullImgBox">
+            <img src="media/ground/Alta Vista-10.jpg" id="fullImg">
+            <span onclick="closeFullImg()">X</span>
+        </div>
+
+        <div class="gallery">
+            <img class="media" src="media/ground/Alta Vista-10.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-11.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-12.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-13.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-14.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-5.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-8.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/btliving.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-3.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Alta Vista-4.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/drift.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/IMG_4335-HDR.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/room.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Untitled_HDR-10.jpg" onclick="openFullImg(this.src)">
+            <img class="media" src="media/ground/Untitled_HDR-18.jpg" onclick="openFullImg(this.src)">
+        </div>
+
+        <script>
+
+            var FullImgBox = document.getElementById("fullImgBox");
+            var FullImg = document.getElementById("fullImg");
+
+            function openFullImg(pic){
+                fullImgBox.style.display = "flex"; //makes the lightbox show up!
+                fullImg.src = pic;
+            }
+            
+            function closeFullImg(){
+                fullImgBox.style.display = "none"; //makes the lightbox dissapear!
+            }
+        </script>
+
+    </div>
+    <div class="footer">
+        <div>Copyright &copy; 2023 Jacob Stephens Photography</div>        
+    </div>
+</body>
+</html>

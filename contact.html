@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="contact.css" media="screen">
+<meta charset="utf-8">
+<title>Jacob's Real Estate Photography Website</title>
+</head>
+<body>
+     <div class="navbar">
+        <a class="logo" href="index.html">
+            <h1 class="logop1">JACOB STEPHENS</h1>
+            <span>PHOTOGRAPHY</span>
+        </a>
+        <nav>  
+          <a class="header-list" id="about-me" href="about.html">About Me</a>
+          <div class="dropdown">
+              <a class="header-list" id="gallery">Gallery</a>
+                  <div class="dropdown-content">
+                      <a href="gallery.html">Ground-level</a>
+                      <a href="aerial_gallery.html">Aerial</a>
+                  </div>
+          </div>
+          <a class="header-list" href="contact.html">Contact</a>    
+      </nav>
+    </div>
+    <div>
+        <img src="Media/ground/drift.jpg" class="img1"></img>
+    </div>
+    <div class="contact">
+        <h class="contact-me">Contact Me</h>
+        <p class="contact-par">Unlock the full potential of your property and make it stand out in the market with professional real estate photography. Contact me today to schedule a photo session and take your listings to the next level!</p>
+        <p class="number">(737)-465-2337</p>
+        <p class="email">Jacobstephens773@gmail.com</p>
+    </div>
+    <div class="container">
+      <form action="https://formsubmit.co/jacobstephens773@gmail.com" method="POST">
+        <div class="fn">
+          <label>First Name:</label>
+          <input type="text" name="firstname">
+        </div>  
+        <div class="ln">
+          <label>Last Name:</label>
+          <input type="text" name="lastname">
+        </div>
+          <label>Email Address:</label>
+          <input type="text" name="email">
+
+          <label>Message:</label>
+          <textarea name="message" style="height:100px"></textarea>
+      
+          <input type="submit" value="Submit">
+      </form>
+      </div>
+    <div class="footer">
+        <div>Copyright &copy; 2023 Jacob Stephens Photography</div>        
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "jacobstephens772@gmail.com",
+            Password : "il0vepeace!4",
+            To : 'jacobstephens773@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Submission",
+            Body : "And this is the body"
+        }).then(
+        message => alert(message)
+        );
+      }
+    </script>
+</body>
+</html>
