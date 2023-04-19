@@ -8,7 +8,7 @@
         font-family: 'Poppins', sans-serif; /* Set the font family */
     }
     body {
-        height: 3500px; /* default page length */
+        height: auto; /* default page length */
         background-attachment: fixed;
           }
     header, .footer{
