@@ -8,7 +8,7 @@
         font-family: 'Poppins', sans-serif; /* Set the font family */
     }
     body {
-        height: 3500px; /* default page length */
+        height: auto; /* default page length */
         background-attachment: fixed;
           }
     header, .footer{
@@ -22,15 +22,14 @@
         height: 75px;
         display: flex;
         justify-content: space-between; /* center all the elements inside the header */
-        align-items: cfenter; /* ^same thing^ */
+        align-items: center; /* ^same thing^ */
         padding: 0;
     }
     .footer{
-        top: 3400;
+        border-top: 1px solid black;
         position: absolute;
-        height: 20px;
+        height: 45px;
         z-index: 10;
-        
     }
     .navbar{ /* contains header elements */
         width: 100%;
@@ -52,7 +51,7 @@
         border-radius: 25px; /* Round the edges */
         font-size: 16px; /* Increase the font size */
         cursor: pointer; /* Add a cursor on hover to make it clear that it's clickable */
-        transition: background-color 0.5s ease; /* Add a transition effect when hovering over the button */
+        transition: 0.5s ease; /* Add a transition effect when hovering over the button */
         margin-right: 20px; /* Add some margin to separate the buttons */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
