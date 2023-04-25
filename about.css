@@ -139,6 +139,7 @@
     }
     .container {
         margin-left: 70px;
+        max-width: 1500px;
     }
     .column {
         float: left;

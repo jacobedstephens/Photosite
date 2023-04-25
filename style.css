@@ -239,17 +239,17 @@
         .services-paragraph {
             padding: 20px;
         }
+        h4 {
+            line-height: 1.2;
+        }
 .aerial-container {
     height: 750px;
+    width: 100%;
+    align-content: center;
 }
-    .aerial-em {
-        padding-top: 0px;
-        padding-left: 5%;
-        max-width: 400px;
-        position: relative;
-        z-index: 10;
-        top: 250px;
-        color: white;
+    .aerial-content {
+        margin-left: 40px;
+        max-width: 30%;
     }
     .aerial-button {
         color: #000000; /* This affects the header & footer text color */
@@ -277,8 +277,6 @@
         margin-top: 20px;
     }
         .aerial-container video {
-            position: absolute;
-            top: 1000;
             left: 0;
             width: 100%;
             height: 100%;
@@ -288,37 +286,49 @@
             font-size: 90px;
             line-height: .9;
             padding-bottom: 20px;
+            margin-top: -450px;
+            color: white;
+            text-align: left;
         }
         .aerial-text {
             margin-top: 20px;
+            color: white;
         }
 .price-container {
-    height: 900px;
+    height: 1000px;
     background-image: linear-gradient(180deg, rgb(255, 255, 255), rgb(118, 175, 255));
     padding: 60px;
     padding-left: 120px;
     padding-right: 120px;
+    margin-bottom: 10px;
 }
     .price-title-container {
+        width: 100%;
         height: 100px;
         padding-bottom: 50px;
+        position: relative;
+        margin-bottom: 40px;
     }
         .price-title {
             text-align: center;
             font-size: 90px;
         }
     .pricing-container {
-        width: 70%;
+        width: 65%;
         float: left;
         height: 620px;
-        padding-left: 5%;
+        padding-left: 2.5%;
     }
         .package-container {
             width: 30%;
             float: left;
             padding-top: 100px;
-            line-height: 10.5;
+            line-height: 1;
             height: 600px;
+        }
+        .package {
+            padding-top: 75px;
+            padding-bottom: 77px;
         }
         .price-values {
             width: 20%;
@@ -332,6 +342,7 @@
             }
             .pric {
                 line-height: 10.5;
+                font-weight: 400;
             }
 .description-title {
     line-height: 3.33;
@@ -345,15 +356,15 @@
 .standalone {
     margin-top: 33px;
     width: 30%;
-    float: left;
+    float: right;
     text-align: center;
     height: 620px;
-    max-width: 200px;
+    margin-right: 2.5%;
 }
     .standalone-services {
         line-height: 1;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 30px;
     }
     .stand-subtitles {
         line-height: 1.5;
@@ -371,8 +382,9 @@
     text-align: center;
     font-weight: 200;
     font-size: 16.2px;
-    height: 100px;
+    height: auto;
     line-height: 1.3;
+    margin-bottom: 20px;
 }
 .book-button {
         color: #000000; /* This affects the header & footer text color */
@@ -387,7 +399,8 @@
         cursor: pointer; /* Add a cursor on hover to make it clear that it's clickable */
         transition: background-color 0.3s ease; /* Add a transition effect when hovering over the button */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+        margin-top: 50px;
 }       
 
 .book-button:hover {
@@ -398,20 +411,22 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    height: 300px;
+    height: 425px;
+    position: relative;
+    width: 100%;
+    bottom: 40px;
 }
 .btliving {
     position: absolute;
-    top: 3020px;
     left: 0;
     width: 100%;
-    height: 70%;
+    height: 100%;
     object-fit: cover;
     filter: brightness(90%) /* makes image less bright */
 }
 .see-for {
     height: 100px;
-    margin-top: 200px;
+    padding-top: 200px;
     font-weight: 600;
     font-size: 60px;
     z-index: 10;
@@ -439,4 +454,12 @@
     border: 1px solid white;
     color: white;
     font-weight: 300;
+}
+@media screen and (max-width: 600px) {
+    .standalone {
+        margin-right: 0.5%;
+    }
+    .pricing-container {
+        padding-left: 0.5%;
+    }
 }
