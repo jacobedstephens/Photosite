@@ -276,3 +276,21 @@
             pointer-events: auto;
         }
     }
+    /* Decrease size of logo to properly fit menu icon during mobile viewing */
+    @media (max-width: 500px) {
+        .logop1{
+            font-size: 17px;
+        }
+        span {
+            font-size: 17px;
+        }
+        .icon {
+            width: 30px;
+            height: 23px;
+        }
+        .menu {
+            width: 35px;
+            height: 25px;
+            margin-right: 30px;
+        }
+    }
