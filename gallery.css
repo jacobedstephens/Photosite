@@ -186,7 +186,8 @@
         z-index: 100;
      }
      .full-img img {
-        width: 90vw;
+        max-width: 90vw;
+        max-height: 80vh;
         border: 2px solid white;
      }
      .full-img span {
