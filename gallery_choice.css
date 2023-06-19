@@ -4,17 +4,20 @@
         to go underneath the header and footer */
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
         font-family: 'Poppins', sans-serif; /* Set the font family */
     }
     body {
-        height: auto; /* default page length */
+        width: 100vw;
+        height: auto;
+        background: #ffffff;
         background-attachment: fixed;
+        overflow-x: hidden;
+        
           }
     header, .footer{
-        width: 100%;       
         background: #ffffff;
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         color: black;
         left: 0;
     }
@@ -26,11 +29,22 @@
         padding: 0;
     }
     .footer{
-        border-top: 1px solid black;
+        width: 100vw;
         position: absolute;
-        height: 45px;
-        z-index: 10;
+        height: 20px;
+        z-index: 0;
+        font-size: 15px;
+        top: 900px;
     }
+    .footer-text {
+        padding-left: 10px;
+    }
+    @media (min-height: 900px) {
+        .footer{
+            top: 100vh
+        }
+    }
+
     .navbar{ /* contains header elements */
         width: 100%;
         margin: 0; /* Center the DIV horizontally */
@@ -51,7 +65,7 @@
         border-radius: 25px; /* Round the edges */
         font-size: 16px; /* Increase the font size */
         cursor: pointer; /* Add a cursor on hover to make it clear that it's clickable */
-        transition: 0.5s ease; /* Add a transition effect when hovering over the button */
+        transition: background-color 0.5s ease; /* Add a transition effect when hovering over the button */
         margin-right: 20px; /* Add some margin to separate the buttons */
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
@@ -60,7 +74,7 @@
         color: white;
     }
     #about-me {
-        min-width: 126px;
+        min-width: 76px;
     }
     .dropdown {
         height: 82px;
@@ -118,17 +132,18 @@
         font-size: 20px;
         display: inline-block;
         position: absolute;
+        line-height: 1;
     }
-    span {
+   span{
     font-weight: 700;
-    font-size: 20px;
     }
     .logo:hover {
     background-color: transparent;
     color: #ff0000; /* Change the text color on hover */
     text-decoration: none; 
     }
-    nav {
+    nav{
+        overflow-x: hidden;
         display: flex;
         align-items: center;
         margin-left: 40vw;
@@ -136,125 +151,46 @@
         height: 72px;
     }
     .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .gallery-text {
-        margin-top: 40px;
-        font-size: 70px;
-        font-weight: 600;
-        text-align: center;
-        height: 140px;
-    }
-    .gallery {
-        margin: 10px;
         line-height:1.3;
-        -webkit-column-count:3; /* split it into 5 columns */
-        -webkit-column-gap:5px; /* give it a 5px gap between columns */
-        -moz-column-count:3;
-        -moz-column-gap:5px;
-        column-count:3;
-        column-gap:5px;
-     }
-      .gallery img {
-        width: 100% !important;
-        height: auto !important;
-        margin-bottom:5px; /* to match column gap */
-        cursor: pointer;
+        column-count:2;
+        column-gap:15px;
      }
      .media {
-        transition: 0.5s;
-        padding: 7px;
+        height: 91vh;
+        width: 49.5vw;
+        object-fit: cover;
+        float: left;
+     }
+     .media {
+        filter: brightness(90%);
      }
      .media:hover {
+        transition: 0.5s;
         filter: brightness(60%);
-        transform: scale(1.03);
+        transform: scale(1.01);
      }
-     .full-img {
-        width: 100%;
-        height: 100vh;
-        background: rgba(17, 17, 17, 0.9);
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-     }
-     .full-img img {
-        width: 90vw;
-        border: 2px solid white;
-     }
-     .full-img span {
+     .text {
         position: absolute;
-        top: 5%;
-        right: 5%;
-        font-size: 25px;
-        color: #d8d8d8;
-        cursor: pointer;
+        margin-left: 15vw;
+        margin-top: 40vh;
      }
-     @media (min-width: 800px) {
-        .menu {
-            display: none;
-        }
-        .icon {
-            display: none;
-        }
-        }
-@media (max-width: 500px) {
-    .gallery {
-        margin: 10px;
-        line-height: 1.3;
-        -webkit-column-count: 1; /* display one column of photos */
-        -webkit-column-gap: 5px;
-        -moz-column-count: 1;
-        -moz-column-gap: 5px;
-        column-count: 1;
-        column-gap: 5px;
-    }
-}
-@media (max-width: 700px) {
-    .header-list {
-        border-top: 1px solid grey;
-    }
-    .rcp {
-        font-size: 3.5vw;
-        font-weight: 300;
-    }
-    .logo {
-        white-space: nowrap;
-    }
-    .header-list {
-        display: none;
-    }
-}
-     @media (max-width: 1000px) and (min-width: 500px){
-        .gallery {
-            margin: 10px;
-            line-height:1.3;
-            -webkit-column-count:2; /* split it into 5 columns */
-            -webkit-column-gap:5px; /* give it a 5px gap between columns */
-            -moz-column-count:2;
-            -moz-column-gap:5px;
-            column-count:2;
-            column-gap:5px;
+     .text2 {
+        position: absolute;
+        margin-left: 60vw;
+        margin-top: 40vh;
      }
-    }
-    @media (max-width: 1000px) {
-        .gallery-text {
-            margin-top: 4vw;
-            font-size: 7vw;
-            font-weight: 600;
-            text-align: center;
-            height: 14vw;
-        }
-    }
+     h2 {
+        font-size: 3vw;
+        font-weight: 600;
+        color: white;
+     }
+     .media:hover .text {
+        position: absolute;
+        margin-left: 15vw;
+        margin-top: 40vh;
+     }
     @media (max-width: 800px) {
-        nav {
+        .nav {
             display: none;
         }
         .dropdown {
@@ -263,7 +199,7 @@
         .menu {
             width: 40px;
             height: 30px;
-            margin-right: 40px;
+            padding-right: 4vw;
         }
         .icon {
             width: 100%;
@@ -274,13 +210,13 @@
         .menu-checkbox {
             display: none;
         }
-    
+
         /* Styling for the menu icon */
         .menu-icon {
             cursor: pointer;
             padding: 10px;
         }
-    
+
         /* Styling for the sidebar menu */
         .sidebar {
             z-index: 9999;
@@ -293,28 +229,29 @@
             transition: right 0.3s ease;
             box-shadow: 5px 12px 7px rgba(0, 0, 1, 1);
         }
-    
+
         /* Show the sidebar when checkbox is checked */
         .menu-checkbox:checked ~ .sidebar {
             right: 0;
         }
-    
+
         /* Styling for the sidebar menu items */
         .sidebar ul {
             list-style-type: none;
         }
-    
+
         .sidebar li {
             margin: 20px;   
         }
-    
+
         .sidebar a {
             text-decoration: none;
             color: #000000;
         }
-    
+
         /* Overlay to capture clicks outside the sidebar */
         .overlay {
+            z-index: 999;
             position: fixed;
             top: 0;
             left: 0;
@@ -324,10 +261,18 @@
             pointer-events: none;
             transition: background-color 0.3s ease;
         }
-    
+
         /* Show the overlay when checkbox is checked */
         .menu-checkbox:checked ~ .overlay {
             background-color: rgba(0, 0, 0, 0.5);
             pointer-events: auto;
         }
     }
+    @media (min-width: 800px) {
+        .menu {
+            display: none;
+        }
+        .icon {
+            display: none;
+        }
+        }

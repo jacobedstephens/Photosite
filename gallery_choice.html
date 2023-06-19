@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="gallery_choice.css" media="screen">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="navbar">
+    <a class="logo" href="index.html">
+        <h1 class="logop1">JACOB STEPHENS <span id="span" >PHOTOGRAPHY</span></h1>
+    </a>
+    <div class="menu">
+        <label for="menu-checkbox" class="menu-icon">
+            <img class="icon" src="Media/menu-icon.png"></img>
+        </label>
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+
+        <div class="sidebar">
+            <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="aerial_gallery.html">Aerial Gallery</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <script>
+        // Get the necessary elements from the DOM
+        var menuCheckbox = document.getElementById('menu-checkbox');
+        var menuIcon = document.querySelector('.menu-icon');
+        var sidebar = document.querySelector('.sidebar');
+      
+        // Attach a click event listener to the menu icon
+        menuIcon.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default click behavior of the menu icon
+          menuCheckbox.checked = !menuCheckbox.checked; // Toggle the checkbox state
+        });
+      
+        // Attach a click event listener to the document
+        document.addEventListener('click', function(event) {
+          // Check if the click is outside the sidebar and the menu icon
+          var isSidebarClicked = sidebar.contains(event.target);
+          var isMenuIconClicked = menuIcon.contains(event.target);
+      
+          if (!isSidebarClicked && !isMenuIconClicked) {
+            menuCheckbox.checked = false; // Uncheck the checkbox to hide the sidebar
+          }
+        });
+    </script>
+        <nav class="nav">
+          <a class="header-list" id="about-me" href="about.html">About Me</a>
+          <a class="header-list" id="gallery" href="gallery_choice.html">Gallery</a>
+          <a class="header-list" href="contact.html">Contact</a>    
+        </nav>
+      </div>
+      <div class="container">
+          <a href="aerial_gallery.html"><img class="media" src="Media/aerial/DJI_0142-Edit.jpg"></img><h2 class="text">Aerial Gallery</h2></a>
+          <a href="gallery.html"><img class="media" src="Media/ground/img-01.jpg"></img><h2 class="text2">Ground-level Gallery</h2></a>
+      </div>
+</body>
+</html>
