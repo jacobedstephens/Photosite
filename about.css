@@ -197,6 +197,9 @@
         .icon {
             display: none;
         }
+        .text-container1 {
+            display: none;
+        }
     }
     @media (max-width: 800px) {
         .nav {
@@ -274,6 +277,27 @@
         .menu-checkbox:checked ~ .overlay {
             background-color: rgba(0, 0, 0, 0.5);
             pointer-events: auto;
+        }
+
+
+        .container {
+            margin: 40px;
+        }
+        .column {
+            float: none;
+            width: 100%;
+        }
+        .img {
+            width: 100%;
+        }
+        .img2 {
+            width: 100%;
+        }
+        .text {
+            margin-right: 0;
+        }
+        .text-container {
+            display: none;
         }
     }
     /* Decrease size of logo to properly fit menu icon during mobile viewing */
