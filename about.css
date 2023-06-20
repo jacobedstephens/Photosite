@@ -299,6 +299,10 @@
         .text-container {
             display: none;
         }
+
+        .column {
+            margin-top: 0px;
+        }
     }
     /* Decrease size of logo to properly fit menu icon during mobile viewing */
     @media (max-width: 500px) {
